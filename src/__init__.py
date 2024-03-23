@@ -4,9 +4,8 @@ Initialization module for the 'src' package.
 Defines the list of modules to be imported when the package is imported.
 
 Modules:
-- file_editor: Contains functions for opening and saving files.
-- file_operations: Contains additional file operations.
-
+- file_editor: Contains the FileEditor class for the text editor.
+- file_operations: Contains functions for opening and saving files.
 """
 
 # Define the list of modules to be imported when the package is imported

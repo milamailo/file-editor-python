@@ -1,4 +1,5 @@
-"""This module provides functions for opening and saving files in a text editor.
+"""
+This module provides functions for opening and saving files in a text editor.
 
 Functions:
 - open_file(text_widget): Open a file and insert its content into the specified text widget.
@@ -15,6 +16,7 @@ def open_file(text_widget):
         with open(filename, "r", encoding="utf-8") as file:
             content = file.read()
             text_widget.insert("end", content)
+
 def save_file(text_widget):
     """Save the content of the text editor into a file."""
     # Open a file dialog to select a location for saving the file
