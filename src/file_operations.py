@@ -1,3 +1,10 @@
+"""This module provides functions for opening and saving files in a text editor.
+
+Functions:
+- open_file(text_widget): Open a file and insert its content into the specified text widget.
+- save_file(text_widget): Save the content of the specified text widget into a file.
+"""
+
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 
 def open_file(text_widget):
