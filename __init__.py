@@ -12,4 +12,4 @@ __all__ = ['file_editor']
 # Import the file_editor module from the src subpackage
 # This import statement allows the file_editor functions to be accessed directly from the package
 # Users can use "from package import file_editor" to access the file_editor functions
-from .src import file_editor
+from .src.file_editor import file_editor
