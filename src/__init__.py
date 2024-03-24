@@ -9,8 +9,7 @@ Modules:
 """
 
 # Define the list of modules to be imported when the package is imported
-__all__ = ['file_editor', 'file_operations']
+__all__ = ['file_operations']
 
 # Import modules to make them available when the package is imported
-from . import file_editor
 from . import file_operations

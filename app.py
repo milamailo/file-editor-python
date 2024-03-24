@@ -3,7 +3,7 @@
 This module contains the main function to run the application.
 """
 
-from .src.file_editor import FileEditor
+from src.file_editor import FileEditor
 
 def main():
     """Main function to run the application."""

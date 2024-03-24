@@ -6,7 +6,7 @@ This module provides a class for a simple text editor using Tkinter.
 Classes:
 - FileEditor: A class for a simple text editor.
 """
-
+import os
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
 from .file_operations import open_file, save_file
@@ -19,6 +19,10 @@ class FileEditor:
         # Initialize the Tkinter window
         self.window = Tk()
         self.window.title("Text Editor")
+
+        # Get the path to the images directory relative to the current script
+        current_dir = os.path.dirname(__file__)
+        self.images_dir = os.path.abspath(os.path.join(current_dir, "../images"))
 
         # Create a menu bar
         menubar = Menu(self.window)
@@ -45,8 +49,8 @@ class FileEditor:
         toolbar_frame.grid(row=1, column=1, sticky=W)
 
         # Load images for buttons
-        open_image = PhotoImage(file="image/open-folder.png")
-        save_image = PhotoImage(file="image/save.png")
+        open_image = PhotoImage(file=os.path.join(self.images_dir, "open.png"))
+        save_image = PhotoImage(file=os.path.join(self.images_dir, "save.png"))
 
         # Create buttons for opening and saving files
         Button(toolbar_frame, image=open_image, command=self.open_file).grid(row=1, column=1, sticky=W)
