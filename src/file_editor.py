@@ -49,12 +49,12 @@ class FileEditor:
         toolbar_frame.grid(row=1, column=1, sticky=W)
 
         # Load images for buttons
-        open_image = PhotoImage(file=os.path.join(self.images_dir, "open.png"))
-        save_image = PhotoImage(file=os.path.join(self.images_dir, "save.png"))
+        self.open_image = PhotoImage(file=os.path.join(self.images_dir, "open.png"))
+        self.save_image = PhotoImage(file=os.path.join(self.images_dir, "save.png"))
 
         # Create buttons for opening and saving files
-        Button(toolbar_frame, image=open_image, command=self.open_file).grid(row=1, column=1, sticky=W)
-        Button(toolbar_frame, image=save_image, command=self.save_file).grid(row=1, column=2)
+        Button(toolbar_frame, image=self.open_image, command=self.open_file).grid(row=1, column=1, sticky=W)
+        Button(toolbar_frame, image=self.save_image, command=self.save_file).grid(row=1, column=2)
 
     def create_text_editor(self):
         """Create a frame for the text editor."""
